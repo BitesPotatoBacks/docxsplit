@@ -29,7 +29,7 @@ chmod 755 ./docxsplit.sh
 
 ## Execution Options
 
-Running this script will prompt you to input the name of your file -- But the file the script will pull will be from the directory your terminal is currently operating in. To get a file from a different folder, put your folders path (In quotes) at the end of the execution command, like so:
+Running this script will prompt you to input the name of your file -- But the script will look for your file in the directory your terminal is currently operating in. To get a file from a different folder, put your folders path (In quotes) at the end of the execution command, like so:
 
 ```zsh
 ./docxsplit.sh "Your/Folder/Path/Here"
