@@ -38,13 +38,19 @@ then
     echo "\033[0;35mTo split a DOCX\033[0m"
     echo "Run the script stand alone: \033[0;32m./docxsplit.sh\033[0m"
 
-    sleep 0.2s && echo ""
+    echo ""
 
     echo "\033[0;35mTo split a DOCX in another folder\033[0m"
     echo "Run the script along with your folder's path (Contained in quotes)."
     echo 'Spaces in path are permitted: \033[0;32m./docxsplit.sh "Your/Folder/Path/Here"\033[0m'
 
-    sleep 0.2s && echo ""
+    echo ""
+
+    echo "\033[0;35mTo split a DOCX in a parent folder\033[0m"
+    echo "Run the script along with a special command (Contained in quotes)."
+    echo 'S\033[0;32m./docxsplit.sh "../"\033[0m'
+
+    echo ""
 
     echo "Note: You can exit the script by typing 'quit' when prompted for your file name."
 
