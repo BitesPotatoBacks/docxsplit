@@ -29,7 +29,7 @@ chmod 755 ./docxsplit.sh
 
 ## Execution Options
 
-Running this script will prompt you to input the name of your file -- But the script will look for your file in the directory your terminal is currently operating in. To get a file from a different folder, put your folders path (In quotes) at the end of the execution command, like so:
+When running, this script will prompt you to input the name of your DOCX file -- But, in doing so, the script will look for that file in _the directory your terminal is currently operating in._ To get split a DOCX file that is located in a different folder, put your folders path (In quotes) at the end of the execution command, like so:
 
 ```zsh
 ./docxsplit.sh "Your/Folder/Path/Here"
@@ -41,13 +41,13 @@ The script follows the same rules of the ```cd``` command, which means you can n
 ./docxsplit.sh "../"
 ```
 
-And if you forget you can do that, run
+And if you forget you can do that, just run:
 
 ```zsh
 ./docxsplit.sh help!
 ```
 
-And the script will remind you.
+and the script will remind you.
 
 ## Bugs and Issues
 
