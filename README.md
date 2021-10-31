@@ -1,5 +1,5 @@
 # docxsplit
-A Shell Script made for MacOS, designed to neatly split a DOCX file down into it's base XML and file structure, while still preserving the orignial DOCX.
+A Unix Shell Script designed to neatly split a DOCX file down into it's base XML and file structure, while still preserving the orignial DOCX.
 
 ### Hold on...Come again? It does what?
 It let's you turn this
