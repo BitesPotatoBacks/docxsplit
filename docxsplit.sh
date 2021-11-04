@@ -1,18 +1,15 @@
 #!/bin/sh
-# Coded with ❤️ by BitesPotatoBacks
 
-TIMESTAMP=`date +%y%m%d%H%M`
+TIMESTAMP=`date +%y%m%d%H%M%s`
 
 echo ""
 
 MAIN() {
-    echo "Input your file name\033[0;35m without\033[0m it's extension:\t"
-    read -p "Spaces are permitted: " NAME
-
-    if [ "$NAME" == "quit" ]
+    echo "Enter the name of your .docx excluding it's extension, or hit Control+C to exit\t"
+    read -p "(spaces are permitted): " NAME
+    
+    if [ -e "$NAME.docx" ]
     then
-        exit
-    else
         BINARYCODE=`echo "${NAME}" | perl -lpe '$_=unpack"B*"'`
         rm -f ${BINARYCODE}.zip
 
@@ -24,38 +21,28 @@ MAIN() {
         unzip -qq ${BINARYCODE}.zip -d "${NAME}"-${TIMESTAMP}
         rm ${BINARYCODE}.zip
 
-        sleep 1s && echo ""
-        echo "\033[0;32mDone! \033[0m"
-        sleep 0.6s && echo ""; exit
+        echo ""
+        echo "\033[0;32m'${NAME}.docx' was splitted successfully\033[0m"
+    else
+        echo ""
+        echo "\033[0;31mThe file '${NAME}.docx' does not exist. Please try again. \033[0m"
+        echo ""
+        MAIN
     fi
 }
 
 if [ ! "$@" ]
 then
     MAIN
-elif [ "$@" == "help!" ]
-then
-    echo "\033[0;35mTo split a DOCX\033[0m"
-    echo "Run the script stand alone: \033[0;32m./docxsplit.sh\033[0m"
-
-    echo ""
-
-    echo "\033[0;35mTo split a DOCX in another folder\033[0m"
-    echo "Run the script along with your folder's path (Contained in quotes)."
-    echo 'Spaces in path are permitted: \033[0;32m./docxsplit.sh "Your/Folder/Path/Here"\033[0m'
-
-    echo ""
-
-    echo "\033[0;35mTo split a DOCX in a parent folder\033[0m"
-    echo "Run the script along with a special command (Contained in quotes)."
-    echo 'S\033[0;32m./docxsplit.sh "../"\033[0m'
-
-    echo ""
-
-    echo "Note: You can exit the script by typing 'quit' when prompted for your file name."
-
-    sleep 0.6s && echo ""; exit
 else
-    cd "$@"
-    MAIN
+    if [ -d "$@" ]
+    then
+        cd "$@"
+        echo "\033[0;36mChanged directory to '/$@'\033[0m"
+        echo ""
+        MAIN
+    else
+        echo "\033[0;31mThe directory '/$@' does not exist, or may contain a special character that was not escaped. Please try again. \033[0m"
+        echo ""
+    fi
 fi
