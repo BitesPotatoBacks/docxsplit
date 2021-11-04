@@ -1,5 +1,5 @@
 # docxsplit
-A Unix Shell Script designed to neatly split a DOCX file down into it's base XML and file structure, while still preserving the orignial DOCX.
+A Unix Shell Script designed to neatly split a .docx file down into it's base XML and file structure, while still preserving the orignial .docx.
 
 ## To Run
 
@@ -11,22 +11,23 @@ cd Downloads
 # download the script using curl
 curl https://raw.githubusercontent.com/BitesPotatoBacks/docxsplit/main/docxsplit --output docxsplit
 
-# you may need to force the file to become an executable
+# change file permissions to make it executable
 chmod 755 ./docxsplit
 
-# execute the script
+# execute the script (or just open it from Finder).
 ./docxsplit
 ```
 
 ## Execution Options
 
-When running, this script will prompt you to input the name of your .docx file -- But, in doing so, the script will look for that file in _the directory your terminal is currently operating in._ To get split a .docx file that is located in a different folder, put your directory path at the end of the execution command, like so:
+You can add a path to a directory as an argument for the command. This will force the script to navigate into that specified directory. Please make sure to escape special characters with a backslash, such as spaces.
 
 ```zsh
-./docxsplit Your/Folder/Path/Here
+./docxsplit Your/Directory/Name\ Here
 ```
 
-Note: The script follows the same rules of the `cd` command, so make sure to escape in spaces with a `\`.
+## Execution Warnings
+When prompted to enter your files name, please **DO NOT** prefix your file with a directory path. This will break the script and result in an unsuccesful split. Please use the directory path as an argument to the command, as was stated above.
 
 ## Bugs and Issues
 
