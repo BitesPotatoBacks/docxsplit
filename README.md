@@ -17,6 +17,15 @@ chmod 755 ./docxsplit
 # execute the script (or just open it from Finder).
 ./docxsplit
 ```
+If you want to be able to execute docxsplit from any directory, put the binary in your `usr/local/bin`:
+```zsh
+sudo cp ./docxsplit /usr/local/bin
+```
+Now you can simply call:
+```zsh
+docxsplit
+```
+
 
 ## Execution Options
 
