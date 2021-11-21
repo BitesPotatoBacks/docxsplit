@@ -9,7 +9,7 @@ Run these following commands in your Terminal:
 cd Downloads
 
 # download the script using curl
-curl https://raw.githubusercontent.com/BitesPotatoBacks/docxsplit/main/docxsplit --output docxsplit
+curl https://raw.githubusercontent.com/BitesPotatoBacks/docxsplit/main/docxsplit.sh --output docxsplit
 
 # change file permissions to make it executable
 chmod 755 ./docxsplit
