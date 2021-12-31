@@ -1,35 +1,34 @@
-# docxsplit
-A Unix Shell Script designed to neatly split a .docx file down into it's base XML and file structure, while still preserving the orignial .docx.
+<h1 align="center" style="">docxsplit</h1>
 
-## To Run
+<p align="center">
+    A Unix Shell Script made to neatly split a .docx file into it's base XML and folder structure.
+</p>
+<p align="center">
+    <a href="https://github.com/BitesPotatoBacks/docxsplit/releases">
+        <img alt="Releases" src="https://img.shields.io/github/release/BitesPotatoBacks/docxsplit.svg"/>
+    </a>
+    <a href="https://github.com/BitesPotatoBacks/docxsplit/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/BitesPotatoBacks/docxsplit.svg"/>
+    </a>
+    <!-- <a href="https://github.com/BitesPotatoBacks/osx-cpufreq/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/BitesPotatoBacks/osx-cpufreq.svg"/></a>-->
+    <br>
+</p>
 
-Run these following commands in your Terminal:
-```zsh
-# navigate into your Downloads folder or any directory of your choice
-cd Downloads
-
-# download the script using curl
-curl https://raw.githubusercontent.com/BitesPotatoBacks/docxsplit/main/docxsplit.sh --output docxsplit
-
-# change file permissions to make it executable
+## Preparation 
+Download the precompiled binary from the [releases](https://github.com/BitesPotatoBacks/docxsplit/releases) and run these commands to fix the binary permissions:
+```
 chmod 755 ./docxsplit
-
-# execute the script (or just open it from Finder).
-./docxsplit
 ```
-If you want to be able to execute docxsplit from any directory, put the binary in your `usr/local/bin`:
-```zsh
+<!-- If you want to be able to execute docxsplit from any directory, put the binary in your `usr/local/bin`:
+```
 sudo cp ./docxsplit /usr/local/bin
+``` -->
+## Usage
 ```
-Now you can simply call:
-```zsh
 docxsplit
 ```
 
-
-## Execution Options
-
-You can add a path to a directory as an argument for the command. This will force the script to navigate into that specified directory. Please make sure to escape special characters with a backslash, such as spaces.
+To navigate into another directory, you can add the directory path as an argument.
 
 ```zsh
 ./docxsplit Your/Directory/Name\ Here
