@@ -25,7 +25,7 @@ sudo cp ./docxsplit /usr/local/bin
 ``` -->
 ## Usage
 ```
-docxsplit
+./docxsplit
 ```
 
 To navigate into another directory, you can add the directory path as an argument.
@@ -36,6 +36,17 @@ To navigate into another directory, you can add the directory path as an argumen
 
 ## Execution Warnings
 When prompted to enter your files name, please **DO NOT** prefix your file with a directory path. This will break the script and result in an unsuccesful split. Please use the directory path as an argument to the command, as was stated above.
+
+## Changelog
+
+```markdown
+## [1.1.0] - Dec 27, 2021
+- Added XML formatting
+- Removed unnecessary `echo` lines
+
+## [1.0.0] - Nov 3, 2021
+- Initial release
+```
 
 ## Bugs and Issues
 
